@@ -2,33 +2,46 @@
 
 Provide standard validation for schemas.
 
-**Note:** this is a module in development! Proper CI and Coverage reports will be mentioned when ready to use.
-
 
 ## Install
 
-More information, soon!
+```
+npm i -S @perfect-schema/standard-validators
+```
 
 
 ## Usage
 
 ```js
 import PerfectSchema from '@perfect-schema/base';
-import standardValidators from '@perfect-schema/standard-validators';
+import validatorsPlugin from '@perfect-schema/standard-validators';
 
-// use these validators with schemas
-PerfectSchema.use(standardValidators);
+
+PerfectSchema.use(validatorsPlugin);
 
 const schema = new PerfectSchema({
-  foo: String
+  foo: {
+    type: String,
+    match: /[a-z0-9]+/i
+  },
+  bar: {
+    type: Number,
+    restrictedValues: [2, 3, 5, 7, 11, 13, 17, 19]
+  }
 });
 ```
 
+
 ## Documentation
 
-More information, soon!
+* [Perfect Schema Documentation](https://perfect-schema.github.io/perfect-schema/)
+* Standard validators
+  * [Allowed Values](https://perfect-schema.github.io/standard-validators/docs/allowed-values.html/)
+  * [Custom validation](https://perfect-schema.github.io/standard-validators/docs/custom.html/)
+  * [Match Pattern](https://perfect-schema.github.io/standard-validators/docs/match.html/)
+  * [Restricted Values](https://perfect-schema.github.io/standard-validators/docs/restricted-values.html/)
 
 
 ## license
 
-ISC
+MIT

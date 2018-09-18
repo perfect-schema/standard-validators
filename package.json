@@ -1,19 +1,18 @@
 {
   "name": "@perfect-schema/standard-validators",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "description": "Standard validators for Perfect Schema",
   "author": "Yanick Rochon <yanick.rochon@gmail.com>",
-  "license": "ISC",
-  "main": "src/validators.js",
-  "browser": "dist/perfect-schema-std-val.min.js",
+  "license": "MIT",
+  "main": "dist/index.js",
   "engines": {
     "node": ">= 8.2.1"
   },
   "scripts": {
-    "test": "jest --forceExit",
+    "test": "BABEL_ENV=test jest --forceExit --detectOpenHandles",
     "test-cov": "npm run test -- --coverage",
-    "lint": "eslint benchmarks src --fix",
-    "prepublishOnly": "gulp"
+    "lint": "eslint src --fix",
+    "prepublishOnly": "BABEL_ENV=production gulp"
   },
   "repository": {
     "type": "git",
@@ -25,31 +24,28 @@
     "schema",
     "validation"
   ],
-  "peerDependencies": {
-    "@perfect-schema/core": "^2.0.0"
-  },
+  "peerDependencies": {},
   "devDependencies": {
-    "babel-preset-es2015": "^6.24.1",
-    "babelify": "^8.0.0",
-    "browserify": "^14.5.0",
-    "eslint": "^4.11.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "gulp": "^3.9.1",
-    "gulp-buffer": "0.0.2",
-    "gulp-butternut": "^1.0.0",
-    "gulp-derequire": "^2.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-util": "^3.0.8",
-    "istanbul": "^0.4.5",
-    "jest": "^21.2.1",
-    "uppercamelcase": "^3.0.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@perfect-schema/base": "^2.4.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "^23.6.0",
+    "eslint": "^5.4.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "jest": "^23.5.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "jest": {
     "testMatch": [
@@ -60,6 +56,22 @@
       "lcov"
     ],
     "bail": true,
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "globals": {
+      "NODE_ENV": "test"
+    },
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!var-validator)/"
+    ]
   }
 }
