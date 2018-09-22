@@ -1,6 +1,6 @@
 {
   "name": "@perfect-schema/standard-validators",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Standard validators for Perfect Schema",
   "author": "Yanick Rochon <yanick.rochon@gmail.com>",
   "license": "MIT",

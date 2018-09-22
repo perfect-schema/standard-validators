@@ -36,10 +36,10 @@ const schema = new PerfectSchema({
 
 * [Perfect Schema Documentation](https://perfect-schema.github.io/perfect-schema/)
 * Standard validators
-  * [Allowed Values](https://perfect-schema.github.io/standard-validators/docs/allowed-values.html/)
-  * [Custom validation](https://perfect-schema.github.io/standard-validators/docs/custom.html/)
-  * [Match Pattern](https://perfect-schema.github.io/standard-validators/docs/match.html/)
-  * [Restricted Values](https://perfect-schema.github.io/standard-validators/docs/restricted-values.html/)
+  * [Allowed Values](https://perfect-schema.github.io/standard-validators/docs/allowed-values.html)
+  * [Custom validation](https://perfect-schema.github.io/standard-validators/docs/custom.html)
+  * [Match Pattern](https://perfect-schema.github.io/standard-validators/docs/match.html)
+  * [Restricted Values](https://perfect-schema.github.io/standard-validators/docs/restricted-values.html)
 
 
 ## license
