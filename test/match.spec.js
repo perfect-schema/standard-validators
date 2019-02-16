@@ -49,12 +49,12 @@ describe('Testing Match Validator', () => {
 
     [
       'foo',
-      'foo@domain',
+      'foo@.domain',
       '@domain.com',
       'domain.com',
       '@domain.com',
-      'foo@domain.c'
-    ].forEach(email => assert.ok( !pattern.test(email) ) );
+      'foo@domain..c'
+    ].forEach(email => assert.ok( !pattern.test(email) ));
   });
 
 });

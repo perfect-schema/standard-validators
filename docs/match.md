@@ -13,8 +13,8 @@ const schema = new PerfectSchema({
     type: String,
     // password should only contain certain characters
     match: /[a-z0-9!*$%]/i,
-    min: 6,
-    max: 20
+    minLength: 6,
+    maxLength: 20
   }
 });
 ```

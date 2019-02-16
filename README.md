@@ -14,10 +14,14 @@ npm i -S @perfect-schema/standard-validators
 
 ```js
 import PerfectSchema from '@perfect-schema/base';
-import validatorsPlugin from '@perfect-schema/standard-validators';
+import { 
+  matchValidator,
+  restrictedValuesValidator
+} from '@perfect-schema/standard-validators';
 
 
-PerfectSchema.use(validatorsPlugin);
+PerfectSchema.use(matchValidator);
+PerfectSchema.use(restrictedValuesValidator);
 
 const schema = new PerfectSchema({
   foo: {

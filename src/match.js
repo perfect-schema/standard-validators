@@ -1,3 +1,4 @@
+import emailRegex from 'email-regex';
 
 
 function matchValidator(schema) {
@@ -27,7 +28,7 @@ function matchValidator(schema) {
 
 export default PerfectSchema => {
 
-  PerfectSchema.MATCH_EMAIL = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+  PerfectSchema.MATCH_EMAIL = emailRegex({ exact: true });
 
   return matchValidator;
 };
