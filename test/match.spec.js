@@ -39,22 +39,4 @@ describe('Testing Match Validator', () => {
   });
 
 
-  it('should match email pattern', () => {
-
-    const pattern = PerfectSchema.MATCH_EMAIL;
-
-    [
-      'me@domain.com'
-    ].forEach(email => assert.ok( pattern.test(email) ) );
-
-    [
-      'foo',
-      'foo@.domain',
-      '@domain.com',
-      'domain.com',
-      '@domain.com',
-      'foo@domain..c'
-    ].forEach(email => assert.ok( !pattern.test(email) ));
-  });
-
 });

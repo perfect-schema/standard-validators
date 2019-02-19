@@ -1,6 +1,6 @@
 
 
-function restrictedValuesValidator(schema) {
+export default () => schema => {
   schema.fieldNames.forEach(fieldName => {
     const field = schema.fields[fieldName];
 
@@ -20,7 +20,4 @@ function restrictedValuesValidator(schema) {
     }
 
   });
-}
-
-
-export default () => restrictedValuesValidator;
+};

@@ -1,7 +1,6 @@
-import emailRegex from 'email-regex';
 
 
-function matchValidator(schema) {
+export default () => schema => {
   schema.fieldNames.forEach(fieldName => {
     const field = schema.fields[fieldName];
 
@@ -23,12 +22,4 @@ function matchValidator(schema) {
     }
 
   });
-}
-
-
-export default PerfectSchema => {
-
-  PerfectSchema.MATCH_EMAIL = emailRegex({ exact: true });
-
-  return matchValidator;
 };

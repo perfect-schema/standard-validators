@@ -1,6 +1,6 @@
 {
   "name": "@perfect-schema/standard-validators",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "Standard validators for Perfect Schema",
   "author": "Yanick Rochon <yanick.rochon@gmail.com>",
   "license": "MIT",
@@ -28,11 +28,11 @@
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
-    "@perfect-schema/base": "^2.5.2",
+    "@perfect-schema/base": "^2.6.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
-    "eslint": "^5.14.0",
+    "eslint": "^5.14.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
@@ -74,7 +74,5 @@
       "node_modules/(?!var-validator)/"
     ]
   },
-  "dependencies": {
-    "email-regex": "^3.0.0"
-  }
+  "dependencies": {}
 }

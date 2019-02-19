@@ -1,6 +1,6 @@
 
 
-function customValidator(schema) {
+export default () => schema => {
   schema.fieldNames.forEach(fieldName => {
     const field = schema.fields[fieldName];
 
@@ -18,7 +18,4 @@ function customValidator(schema) {
     }
 
   });
-}
-
-
-export default () => customValidator;
+};

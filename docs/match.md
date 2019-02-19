@@ -18,3 +18,9 @@ const schema = new PerfectSchema({
   }
 });
 ```
+
+
+##### Extended schema field options
+
+* **match** : `RegExp|String`
+  Pattern to match. The field value must match the specified pattern.

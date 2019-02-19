@@ -14,3 +14,10 @@ const schema = new PerfectSchema({
   message: String
 });
 ```
+
+
+##### Extended schema field options
+
+* **allowedValues** : `Array`
+  The list of allowed values. The field will only validate if it's value
+  is strictly equal to one of the specified array item.
